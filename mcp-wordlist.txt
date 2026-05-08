@@ -1,0 +1,213 @@
+# MCP Server Discovery Wordlist
+# Generated for bug bounty recon - covers all known/proposed MCP endpoint patterns
+# Categories: well-known discovery, transport endpoints, API paths, metadata, auth
+
+# ─── WELL-KNOWN DISCOVERY (RFC 8615) ───
+.well-known/mcp
+.well-known/mcp.json
+.well-known/mcp-server
+.well-known/mcp-server.json
+.well-known/mcp-servers
+.well-known/mcp-servers.json
+.well-known/mcp/server-card.json
+.well-known/mcp/servers.json
+.well-known/mcp/manifest.json
+.well-known/mcp/config.json
+.well-known/mcp/info
+.well-known/mcp/capabilities
+.well-known/mcp/tools
+.well-known/mcp/resources
+.well-known/mcp/prompts
+.well-known/mcp-manifest.json
+.well-known/mcp-config.json
+.well-known/mcp-info.json
+.well-known/mcp-capabilities.json
+
+# ─── OAUTH/AUTH DISCOVERY (MCP Auth Spec) ───
+.well-known/oauth-authorization-server
+.well-known/oauth-protected-resource
+.well-known/openid-configuration
+.well-known/oauth-authorization-server/mcp
+.well-known/oauth-protected-resource/mcp
+
+# ─── STREAMABLE HTTP TRANSPORT (modern, 2025-03-26+ spec) ───
+mcp
+mcp/
+mcp/v1
+mcp/v2
+mcp/v1/
+mcp/v2/
+api/mcp
+api/mcp/
+api/mcp/v1
+api/mcp/v2
+v1/mcp
+v2/mcp
+app/mcp
+app/mcp/
+
+# ─── SSE TRANSPORT (legacy, 2024-11-05 spec) ───
+sse
+sse/
+mcp/sse
+mcp/sse/
+api/sse
+v1/sse
+v2/sse
+app/sse
+events
+events/
+mcp/events
+stream
+stream/
+mcp/stream
+
+# ─── SSE LEGACY MESSAGE ENDPOINTS ───
+messages
+messages/
+mcp/messages
+mcp/messages/
+api/messages
+v1/messages
+message
+mcp/message
+
+# ─── COMMON FRAMEWORK DEFAULTS ───
+# FastMCP / Python SDK defaults
+mcp/
+# Spring AI defaults
+mcp/messages
+# Node SDK defaults
+sse
+# LangChain / LangGraph
+mcp-server
+mcp_server
+# FastAPI + MCP
+api/v1/mcp
+api/v2/mcp
+
+# ─── GATEWAY / PROXY PATTERNS ───
+mcp-gateway
+mcp-proxy
+gateway/mcp
+proxy/mcp
+agent/mcp
+agents/mcp
+tools/mcp
+tool/mcp
+
+# ─── VERSIONED API PATHS ───
+v1/mcp/sse
+v1/mcp/messages
+v2/mcp/sse
+v2/mcp/messages
+api/v1/sse
+api/v2/sse
+api/v1/messages
+api/v2/messages
+
+# ─── SHOPIFY / COMMERCE PATTERNS ───
+api/mcp
+storefront/mcp
+admin/mcp
+shop/mcp
+
+# ─── ALTERNATE SPELLINGS & SLUGS ───
+mcp-server
+mcp-api
+mcp-endpoint
+mcpserver
+mcpapi
+model-context-protocol
+modelcontextprotocol
+context-protocol
+ai/mcp
+ai/sse
+ai/tools
+ai-tools
+llm/mcp
+llm/tools
+
+# ─── HEALTH / STATUS (confirms MCP presence) ───
+mcp/health
+mcp/status
+mcp/ping
+mcp/ready
+mcp/live
+api/mcp/health
+api/mcp/status
+.well-known/health
+health
+healthz
+ping
+ready
+readyz
+
+# ─── JSON-RPC ENDPOINTS (MCP is JSON-RPC 2.0) ───
+jsonrpc
+json-rpc
+rpc
+mcp/rpc
+api/rpc
+v1/rpc
+
+# ─── WEBSOCKET UPGRADE PATHS ───
+ws
+ws/mcp
+websocket/mcp
+mcp/ws
+mcp/websocket
+
+# ─── METADATA / CAPABILITY ADVERTISEMENT ───
+mcp/manifest
+mcp/capabilities
+mcp/tools
+mcp/resources
+mcp/prompts
+mcp/sampling
+mcp/roots
+mcp/elicitation
+mcp/info
+mcp/meta
+api/mcp/tools
+api/mcp/resources
+api/mcp/capabilities
+tools
+tools/list
+resources
+resources/list
+prompts
+prompts/list
+
+# ─── INITIALIZATION PROBE ───
+# POST to these with {"jsonrpc":"2.0","method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"probe","version":"1.0"}},"id":1}
+mcp
+mcp/
+mcp/v1
+sse
+api/mcp
+
+# ─── CLAUDE.AI / ANTHROPIC SPECIFIC ───
+mcp/claude
+claude/mcp
+anthropic/mcp
+
+# ─── ENTERPRISE / INTERNAL PATTERNS ───
+internal/mcp
+internal/sse
+corp/mcp
+enterprise/mcp
+private/mcp
+secure/mcp
+
+# ─── DOCKER / CONTAINER COMMON PORTS AS PATHS ───
+mcp/8080
+mcp/3000
+mcp/8000
+
+# ─── SERVER CARD (SEP-1649 / 2026 roadmap) ───
+.well-known/mcp/server-card.json
+server-card.json
+mcp/server-card
+mcp/server-card.json
+.well-known/server-card.json
